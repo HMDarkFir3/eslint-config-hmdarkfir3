@@ -1,6 +1,8 @@
 module.exports = {
   env: {
-    es6: true,
+    browser: true,
+    es2021: true,
+    node: true,
   },
 
   settings: {
@@ -12,23 +14,15 @@ module.exports = {
     },
   },
 
-  plugins: [
-    "import",
-    "promise",
-    "react",
-    "react-hooks",
-    "react-native",
-    "jsx-a11y",
-    "@typescript-eslint",
-  ],
-
   extends: [
-    "standard",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
+    "standard",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
   ],
+
+  plugins: ["react", "jsx-a11y", "react-native", "@typescript-eslint"],
 
   parser: "@typescript-eslint/parser",
   parserOptions: {
